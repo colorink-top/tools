@@ -164,10 +164,13 @@ body {
 .preview-container {
   margin-top: 20px;
   text-align: center;
+  overflow: auto;
+  max-width: 100%;
 }
 .preview-wrapper {
   position: relative;
   display: inline-block;
+  min-width: 100%;
 }
 .preview-wrapper canvas {
   border: 2px solid #e2e8f0;
@@ -182,6 +185,7 @@ body {
   position: absolute;
   cursor: move;
   display: none;
+  box-sizing: border-box;
 }
 .selection-overlay.temp-selection {
   border: 2px solid #667eea;
@@ -308,6 +312,23 @@ body {
   font-size: 11px;
   font-family: monospace;
   z-index: 1000;
+}
+
+.canvas-info {
+  margin-top: 5px;
+  font-size: 11px;
+  color: #718096;
+}
+
+.auto-save-badge {
+  display: inline-block;
+  background: #48bb78;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 10px;
+  margin-left: 10px;
+  vertical-align: middle;
 }
 
 @media (max-width: 768px) {
